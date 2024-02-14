@@ -15,14 +15,10 @@ class Entity {
 			data,
 			method: 'GET',
 			url: this.URL,
-			callback
-		});
-		callback = (error, response) => {
-			if (!response.success) {
-				alert(`error: ${error}`);
+			callback: (error, response) => {
+				callback(error, response);
 			}
-			return response;
-		};
+		});
 	}
 
 
@@ -36,14 +32,10 @@ class Entity {
 			data,
 			method: 'PUT',
 			url: this.URL,
-			callback
-		});
-		callback = (error, response) => {
-			if (!response.success) {
-				alert(`error: ${error}`);
+			callback: (error, response) => {
+				callback(error, response);
 			}
-			return response;
-		};
+		});
 	}
 
 	/**
@@ -55,13 +47,9 @@ class Entity {
 			data,
 			method: 'DELETE',
 			url: this.URL,
-			callback
-		});
-		callback = (error, response) => {
-			if (!response.success) {
-				alert(`error: ${error}`);
+			callback: (error, response) => {
+				callback(error, response);
 			}
-			return response;
-		};
+		});
 	}
 }

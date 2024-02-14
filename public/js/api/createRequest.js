@@ -5,14 +5,18 @@
 const createRequest = (options = {}) => {
 	const xhr = new XMLHttpRequest();
 	xhr.responseType = 'json';
-	let url = options.url;
-	let method = options.method;
+	let {url, method, data} = options;
 	let formData = new FormData();
-	let data = options.data;
 
 	if (method === 'GET') {
-		for (let key in data)
-			url += '?' + key + '&' + data[key];
+		url += '?';
+		for (let key in data){
+			if(url.slice(-1) == '?'){
+				url += `${key}=${data[key]}`
+			} else {
+				url +=`&${key}=${data[key]}`
+			}
+		}
 	} else {
 		for (let key in data) {
 			formData.append(key, data[key]);

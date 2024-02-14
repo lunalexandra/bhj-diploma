@@ -26,11 +26,7 @@ class User {
 	 * из локального хранилища
 	 * */
 	static current() {
-		if (localStorage.getItem('user')) {
-			return JSON.parse(localStorage.getItem('user'));
-		} else {
-			return undefined;
-		}
+		return JSON.parse(localStorage.getItem('user'));
 	}
 
 	/**
@@ -41,16 +37,15 @@ class User {
 		createRequest({
 			method: 'GET',
 			url: this.URL + '/current',
-			callback
-		});
-		callback = (error, response) => {
-			if (response.success) {
+			callback: (error, response) => {
+				if (response.success) {
 				this.setCurrent(response.user);
 			} else {
 				this.unsetCurrent();
-				alert('error:' + response.error);
 			}
-		};
+			callback(error, response);
+		}
+		});
 	}
 
 	/**
@@ -101,7 +96,6 @@ class User {
 		createRequest({
 			url: this.URL + '/logout',
 			method: 'POST',
-			data,
 			callback: (error, response) => {
 				if (response.success) {
 					this.unsetCurrent();
