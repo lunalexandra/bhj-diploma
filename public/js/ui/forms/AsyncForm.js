@@ -13,13 +13,10 @@ class AsyncForm {
 	 * через registerEvents()
 	 * */
 	constructor(element) {
-		try {
-			if (element) {
-				this.element = element;
-			}
-		} catch (err) {
-			console.log(err);
-		}
+		if (!element) {
+      throw new Error("Элемент отсутсвует!");
+    }
+		this.element = element;
 		this.registerEvents();
 	}
 
@@ -43,15 +40,7 @@ class AsyncForm {
 	 * */
 	getData() {
 		const formData = new FormData(this.element);
-		const entries = formData.entries();
-		const data = {};
-
-		for (let item of entries) {
-			const key = item[0],
-				value = item[1];
-			data.key = value;
-		}
-		return data;
+  	return Object.fromEntries(formData.entries());
 	}
 
 	onSubmit(options) {

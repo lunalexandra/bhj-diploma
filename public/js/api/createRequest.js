@@ -9,14 +9,8 @@ const createRequest = (options = {}) => {
 	let formData = new FormData();
 
 	if (method === 'GET') {
-		url += '?';
-		for (let key in data){
-			if(url.slice(-1) == '?'){
-				url += `${key}=${data[key]}`
-			} else {
-				url +=`&${key}=${data[key]}`
-			}
-		}
+		const arr = Object.entries({data}).map(([key, value]) => [key + '=' + value]);
+		url = url + '?' + arr.join('&');
 	} else {
 		for (let key in data) {
 			formData.append(key, data[key]);
@@ -27,8 +21,8 @@ const createRequest = (options = {}) => {
 		xhr.open(method, url);
 		xhr.send(formData);
 
-	} catch (error) {
-		options.callback(error);
+	} catch (err) {
+		options.callback(err);
 	}
 
 	xhr.addEventListener('load', () => {

@@ -5,6 +5,162 @@
       "email": "demo@demo",
       "password": "demo",
       "id": "1"
+    },
+    {
+      "id": "80t052cpsltchbt4v"
+    },
+    {
+      "id": "80t052cq0ltclyh16"
+    },
+    {
+      "name": "Александра",
+      "email": "alexa_1986_12@mail.ru",
+      "password": "0662",
+      "id": "80t0528voltcmle7j"
+    },
+    {
+      "name": "Александра",
+      "email": "lenimide@gmail.com",
+      "password": "0662",
+      "id": "80t052ehkltdwe8mn"
+    },
+    {
+      "name": "Кто-то",
+      "email": "ip-lukaam@yandex.ru",
+      "password": "0000",
+      "id": "80t052c04ltdxzygm"
+    },
+    {
+      "name": "Александра",
+      "email": "oleg@demo.ru",
+      "password": "0000",
+      "id": "80t05220wltfchopd"
+    },
+    {
+      "name": "ооо",
+      "email": "lenimid@gmail.com",
+      "password": "0000",
+      "id": "80t052c9gltfh601s"
+    },
+    {
+      "name": "oiioio",
+      "email": "uiuyuiy@mail.ru",
+      "password": "0000",
+      "id": "80t05224glto1yqv7"
+    },
+    {
+      "name": "bhfkk",
+      "email": "lenide@gmail.com",
+      "password": "0000",
+      "id": "80t052c3wlto33rbf"
+    },
+    {
+      "name": "hjjb",
+      "email": "alexa_198612@mail.ru",
+      "password": "0000",
+      "id": "80t0528j4lto3khx5"
+    },
+    {
+      "name": "Александра",
+      "email": "lenimie@gmail.com",
+      "password": "0000",
+      "id": "80t052a14lto3o5lp"
+    },
+    {
+      "name": "sber",
+      "email": "le@gmail.com",
+      "password": "0000",
+      "id": "80t052cr8lto3qo19"
+    },
+    {
+      "name": "sber",
+      "email": "lde@gmail.com",
+      "password": "0000",
+      "id": "80t052c78lto3xq24"
+    },
+    {
+      "name": "оооll",
+      "email": "alexa_1986_@mail.ru",
+      "password": "0000",
+      "id": "80t052164lto40k87"
+    },
+    {
+      "name": "Александра",
+      "email": "e@gmail.com",
+      "password": "0000",
+      "id": "80t05255klto454qx"
+    },
+    {
+      "name": "Александра",
+      "email": "ide@gmail.com",
+      "password": "0000",
+      "id": "80t0529sslto45snh"
+    },
+    {
+      "name": "Александра",
+      "email": "mide@gmail.com",
+      "password": "0000",
+      "id": "80t0525y4lto46wj8"
+    },
+    {
+      "name": "Александра",
+      "email": "alexa_19@mail.ru",
+      "password": "0000",
+      "id": "80t052cs0lto491ey"
+    },
+    {
+      "name": "Александра",
+      "email": "lene@gmail.com",
+      "password": "0000",
+      "id": "80t052ceklto4aiqp"
+    },
+    {
+      "name": "Александра",
+      "email": "nimide@gmail.com",
+      "password": "0000",
+      "id": "80t05286wlto4eeym"
+    },
+    {
+      "name": "Александра",
+      "email": "11111e@gmail.com",
+      "password": "0000",
+      "id": "80t05287slto4vlw4"
+    },
+    {
+      "name": "sber",
+      "email": "alexa@mail.ru",
+      "password": "0000",
+      "id": "80t052bgclto4xy9e"
+    },
+    {
+      "name": "Александра",
+      "email": "eeee@gmail.com",
+      "password": "0000",
+      "id": "80t05260klto518x5"
+    },
+    {
+      "name": "Александра",
+      "email": "333e@gmail.com",
+      "password": "0000",
+      "id": "80t052cewlto5bkzj"
+    },
+    {
+      "name": "Александра",
+      "email": "oleg1@demo.ru",
+      "password": "0000",
+      "id": "80t052bz0lto5d0ws"
+    },
+    {
+      "name": "Александра",
+      "email": "111d@gmail.com",
+      "password": "0000",
+      "id": "80t05255klto5j2dw"
+    },
+    {
+      "name": "чмо",
+      "email": "xvj@gmail.com",
+      "password": "0000",
+      "id": "80t052cz8lto5lm2x"
     }
   ],
   "accounts": [
@@ -22,6 +178,11 @@
       "name": "Бизнес",
       "user_id": "1",
       "id": "3"
+    },
+    {
+      "name": "Александра",
+      "user_id": "80t052cz8lto5lm2x",
+      "id": "80t0529e4ltwim451"
     }
   ],
   "transactions": [
@@ -159,6 +320,24 @@
       "sum": 300000,
       "type": "expense",
       "user_id": "1"
+    },
+    {
+      "id": "80t0525gkltwj4vml",
+      "type": "income",
+      "name": "Александра",
+      "sum": 10000,
+      "account_id": "80t0529e4ltwim451",
+      "user_id": "80t052cz8lto5lm2x",
+      "created_at": "2024-03-18T05:53:11.708Z"
+    },
+    {
+      "id": "80t0529rgltwj615u",
+      "type": "income",
+      "name": "Александра",
+      "sum": 200,
+      "account_id": "80t0529e4ltwim451",
+      "user_id": "80t052cz8lto5lm2x",
+      "created_at": "2024-03-18T05:54:05.537Z"
     }
   ]
 }

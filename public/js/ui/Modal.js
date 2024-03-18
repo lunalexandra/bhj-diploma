@@ -11,18 +11,13 @@ class Modal {
    * Если переданный элемент не существует,
    * необходимо выкинуть ошибку.
    * */
-  constructor(element){
-    try {
-      if(element){
-        this.element = element;
-      }
-    } catch (err){
-      console.log(err);
+  constructor(element) {
+    if (!element) {
+      throw new Error("Элемент отсутсвует!");
     }
-
-    this.registerEvents()
+    this.element = element;
+    this.registerEvents();
   }
-  
 
   /**
    * При нажатии на элемент с data-dismiss="modal"
@@ -30,13 +25,13 @@ class Modal {
    * (с помощью метода Modal.onClose)
    * */
   registerEvents() {
-  let modal = this.element.querySelectorAll('[data-dismiss="modal"]');
-  modal.forEach(element => {
-    element.addEventListener('click', (event) => {
-      event.preventDefault();
-      this.onClose(element);
-    })
-  });
+    let modal = this.element.querySelectorAll('[data-dismiss="modal"]');
+    modal.forEach((element) => {
+      element.addEventListener("click", (event) => {
+        event.preventDefault();
+        this.onClose(element);
+      });
+    });
   }
 
   /**
@@ -51,12 +46,12 @@ class Modal {
    * со значением «block»
    * */
   open() {
-    this.element.style.display = 'block';
+    this.element.style.display = "block";
   }
   /**
    * Закрывает окно: удаляет CSS-свойство display
    * */
   close() {
-    this.element.style.display = 'none';
+    this.element.style.display = "none";
   }
 }
